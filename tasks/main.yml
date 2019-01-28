@@ -1,0 +1,6 @@
+---
+- name: Set apt-cacher-ng Proxy
+  template :
+    src: 01acng.j2
+    dest: /etc/apt/apt.conf.d/01acng
+  notify: update apt
